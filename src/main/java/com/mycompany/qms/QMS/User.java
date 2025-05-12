@@ -6,7 +6,7 @@ package com.mycompany.qms.QMS;
 
 /**
  *
- * @author canti
+ * @author janna
  */
 public class User {
     private static String name = "";

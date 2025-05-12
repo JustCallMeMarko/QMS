@@ -8,7 +8,7 @@ import com.mycompany.qms.QMS.Modes;
 import java.net.URL;
 /**
  *
- * @author canti
+ * @author minsey
  */
 public class Landing extends javax.swing.JFrame {
 

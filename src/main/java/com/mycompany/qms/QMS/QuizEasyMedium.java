@@ -9,7 +9,8 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author canti
+ * @author minsey
+ * 
  */
 public class QuizEasyMedium extends javax.swing.JFrame {
     String[][] questionArray;

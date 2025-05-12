@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author canti
+ * @author ak47
  */
 public class Modes extends javax.swing.JFrame {
     /**

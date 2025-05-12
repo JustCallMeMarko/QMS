@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author canti
+ * @author minsey
  */
 public class Database {
     private static final String DB_URL = "jdbc:sqlite:QMS.db";

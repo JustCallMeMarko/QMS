@@ -6,7 +6,7 @@ package com.mycompany.qms.QMS;
 
 /**
  *
- * @author canti
+ * @author ak47
  */
 public class Top extends javax.swing.JPanel {
     /**

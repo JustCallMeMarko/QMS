@@ -9,7 +9,8 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author canti
+ * @author minsey
+ * 
  */
 public class QuizIdentify extends javax.swing.JFrame {
     private boolean isHard;
