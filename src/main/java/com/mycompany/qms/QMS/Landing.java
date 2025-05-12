@@ -5,6 +5,7 @@
 package com.mycompany.qms.QMS;
 import javax.swing.JFrame;
 import com.mycompany.qms.QMS.Modes;
+import java.net.URL;
 /**
  *
  * @author canti
@@ -39,7 +40,7 @@ public class Landing extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(49, 51, 56));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Logo.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png")));
 
         jPanel2.setBackground(new java.awt.Color(49, 51, 56));
 

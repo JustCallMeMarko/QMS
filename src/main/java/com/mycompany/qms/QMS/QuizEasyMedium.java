@@ -316,10 +316,10 @@ public class QuizEasyMedium extends javax.swing.JFrame {
                isSelected = false;
            }
         }else if(counter == questionArray.length ){
-            Database.insertOrUpdateUser(User.getName(), User.getScore(), User.getMode());
             NextBtn.setText("Show Leaderboards");
         }
         if(counter == questionArray.length ){
+            Database.insertOrUpdateUser(User.getName(), User.getScore(), User.getMode());
             Leaderboard lb = new Leaderboard();
             lb.setVisible(true);
             this.dispose();

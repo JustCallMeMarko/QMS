@@ -40,6 +40,7 @@ public class Database {
             VALUES (?, ?, ?)
             ON CONFLICT(username) DO UPDATE SET score = excluded.score;
             """;
+        System.out.println("updated");
         try (Connection conn = DriverManager.getConnection(DB_URL);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, username);

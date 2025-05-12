@@ -257,10 +257,10 @@ public class QuizIdentify extends javax.swing.JFrame {
                     refreshQuestionUI();
                 }
         }else if(counter == identification.length ){
-            Database.insertOrUpdateUser(User.getName(), User.getScore(), User.getMode());
             NextBtn.setText("Show Leaderboards");
         }
         if(counter == identification.length ){
+            Database.insertOrUpdateUser(User.getName(), User.getScore(), User.getMode());
             Leaderboard lb = new Leaderboard();
             lb.setVisible(true);
             this.dispose();

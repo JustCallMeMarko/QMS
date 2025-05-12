@@ -84,7 +84,7 @@ public class Modes extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Choose your mode:");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/LightBulb.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LightBulb.png")));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));

@@ -4,7 +4,11 @@
  */
 package com.mycompany.qms.QMS;
 
+import java.util.List;
+import javax.swing.BoxLayout;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 /**
  *
@@ -16,11 +20,29 @@ public class Leaderboard extends javax.swing.JFrame {
      * Creates new form Leaderboard
      */
     public Leaderboard() {
-        
         initComponents();
+        showLeaderboard(ScrollPane, User.getMode());
         setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
+    public void showLeaderboard(JScrollPane scrollPane, String mode) {
+        List<String[]> leaderboard = Database.getLeaderboardByMode(mode);
 
+        JPanel container = new JPanel();
+        container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
+
+        int rank = 1;
+        for (String[] entry : leaderboard) {
+            String name = entry[0];
+            String score = entry[1];
+
+            Top topPanel = new Top(rank, name, score);  // use the updated constructor
+            container.add(topPanel);
+
+            rank++;
+        }
+
+        scrollPane.setViewportView(container);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,7 +55,7 @@ public class Leaderboard extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        ScrollPane = new javax.swing.JScrollPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,14 +70,14 @@ public class Leaderboard extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
-            .addComponent(jScrollPane1)
+            .addComponent(ScrollPane)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -126,9 +148,9 @@ public class Leaderboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane ScrollPane;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
