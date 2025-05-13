@@ -319,7 +319,7 @@ public class QuizEasyMedium extends javax.swing.JFrame {
         }else if(counter == questionArray.length ){
             NextBtn.setText("Show Leaderboards");
         }
-        if(counter == questionArray.length ){
+        if(counter == questionArray.length && isEasy ){
             Database.insertOrUpdateUser(User.getName(), User.getScore(), User.getMode());
             Leaderboard lb = new Leaderboard();
             lb.setVisible(true);
